@@ -1,0 +1,75 @@
+body{
+  background-color:  C0C0C0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}
+main{
+  margin:5% auto;
+  width: 80%;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Raleway', sans-serif;
+}
+h1{
+  color:hotpink;
+  padding-left:30%;
+}
+h2,h3,h4,h5,h6{
+  color:#4682B4;
+}
+h2{
+  font-size: 20px;
+}
+h3{
+  font-size: 20px;
+}
+a:link{
+  color:#4682B4;
+  text-decoration: none;
+}
+a:hover{
+  color:hotpink;
+  text-decoration: underline;
+}
+hr{
+  border:solid 1px #dedede;
+  margin-left:30%;
+}
+.contact img{
+  margin: 0 0 15px 0;
+}
+.contact, .main-content{
+  display: inline-block;
+  vertical-align: top;
+}
+.contact{
+  width: 25%;
+}
+.main-content{
+  padding:0 5%;
+  width: 64%;
+}
+.about h2{
+  margin-top:0;
+}
+table{
+  margin-bottom: 30px;
+}
+tr{
+  background-color:  ##F0F8FF;
+  background-color:  ##F0F8FF;
+
+  border-bottom: solid 1px #00000;
+}
+  td{
+  border: solid 1px #cccccc;
+  padding:10px;
+}
+td.competencies{
+  background-color: hotpink;
+  color:#FFFFFF;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 800;
+}
+footer{
+  margin-left:30%;
