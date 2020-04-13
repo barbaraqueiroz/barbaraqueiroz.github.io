@@ -1,0 +1,117 @@
+body{
+  background-color: #ffe4e1;
+  font-family: 'Lato', sans-serif;
+  line-height: 2rem;
+  color:#8b4513;
+  font-size: 1.5rem;
+  line-height: 2.3rem;
+}
+/*Header*/
+h1, .final{
+  font-family: 'Comic Neue', cursive;
+}
+h1{
+  color:#ff69b4;
+  font-size:2.2rem;
+  letter-spacing: 0.1rem;
+  line-height: 3rem;
+  margin-top: 0;
+}
+h1 span, .servings{
+  color: #48D1CC;
+}
+h1 span{
+  font-size:3rem;
+}
+.hide{
+  display:none;
+}
+button{
+  background: #ff69b4;
+  padding:.5rem 1rem;
+  font-size: 2rem;
+  color:#48D1CC;
+}
+.clear{
+  clear: both;
+}
+/* Introduction */
+.intro{
+  font-size:1.5rem;
+  width:80%;
+}
+.intro img{
+  position:absolute;
+  bottom:1rem;
+  width:60%;
+}
+
+/*Ingredients */
+.intro, .ingredients, .mix, .cook, .serve{
+}
+.ingredients img{
+  position:absolute;
+  bottom:9rem;
+  width:60%;
+  display: none;
+}
+.ingredients p{
+  background: #48D1CC;
+  display:table;
+  padding:0 .5rem;
+}
+/* Mix */
+.mix img{
+  position:absolute;
+  bottom:1rem;
+  width:60%;
+}
+/* Cook */
+.cook img{
+  position:absolute;
+  bottom:1rem;
+  width:60%;
+}
+/* Serve */
+.serve img{
+  position:absolute;
+  bottom:1rem;
+  width:60%;
+}
+/* MQ */
+@media(min-width:700px){
+
+  h1{
+    font-size: 3rem;
+    line-height: 3.5rem;
+    display:table;
+    margin-top:5rem;
+  }
+  h1 span{
+    font-size:3rem;
+  }
+  /* Header */
+  header{
+    float:none;
+    padding-top:1rem;
+    margin-top:2rem;
+  }
+  /* Intro */
+  .servings{
+    font-size: 2rem;
+    position: relative;
+    top:5rem;
+  }
+  .intro{
+    font-size: 2rem;
+    line-height: 3.5rem;
+    top:5rem;
+  }
+/* Ingredients */
+.intro, .ingredients, .mix, .cook, .serve{
+  top:5rem;
+}
+.ingredients img{
+  width:auto;
+  bottom:20rem;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Brazilian Brigadeiro Recipe</title>
+    <link rel="stylesheet" href="brigadeiro.css">
+    <link href="https://fonts.googleapis.com/css?family=Comic+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <main>
+      <header>
+    <h1>Easy <span>Brazilian Brigadeiro</span> Recipe</h1>
+    </header>
+    <section class="intro">
+      <p>Want new cultural cooking experiences?</p>
+      <p>Try this super easy Brazilian Brigadeiro recipe</p>
+      <p>Great for "sweet tooths" and beginners.</p>
+      <img src="images/briga.jpg" alt="brigadeiro ingredients">
+    <button class="step1" type="button" name="start">Start</button>
+    </section>
+    <section class="ingredients hide">
+      <h2>Ingredients</h2>
+      <img src="images/ingrs2.png" alt="brigadeiro ingredients">
+      <ul>
+        <li>1 tablespoon butter</li>
+        <li>1 can (14 oz) condensed milk</li>
+        <li>1/4 cup cocoa powder</li>
+        <li>1/2 can (7 oz) heavy cream</li>
+        <li>Sprinkles of your choice</li>
+      </ul>
+      <p class="ing">See Ingredients</p>
+      <button class="step2" type="button" name="next">Next</button>
+    </section>
+    <section class="mix hide">
+      <h2>Mix</h2>
+      <p>all the ingredients on a  pan in medium heat</p>
+      <img src="images/pan.jpg" alt="brigadeiro ingredients">
+      <button class="step3" type="button" name="next">Next</button>
+    </section>
+    <section class="cook hide">
+      <h2>Stir</h2>
+      <p> ingredients  until the mixture thickens</p>
+      <img src="images/thick.jpg" alt="brigadeiro ingredients"> <br>
+      <button class="step4" type="button" name="next">Next</button>
+    </section>
+    <section class="serve hide">
+      <h2>Serve</h2>
+      <p>Combine with sprinkles of your choice</p>
+      <img src="images/brigadeirocolher.jpg" alt="brigadeiro ingredients">
+    </section>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $(".step1").click(function(){
+          $(".intro").hide(1000);
+          $(".ingredients").show(1000);
+          $
+        });
+        $(".step2").click(function(){
+          $(".ingredients").slideUp();
+          $(".mix").slideDown();
+        });
+          $("p.ing").on({
+            mouseenter: function(){
+              $(".ingredients img").fadeIn(1000);
+            },
+              mouseleave: function(){
+                $(".ingredients img").fadeOut(1000);
+              }
+          });
+          $(".step3").click(function(){
+            $(".mix").remove();
+            $(".cook").css("display", "block");
+          });
+          $(".step4").click(function(){
+            $(".cook").slideUp("slow");
+            $(".serve").show();
+            $(".serve").append("<p class='final'>Enjoy!</p>");
+
+          });
+
+
+      });
+    </script>
+  </body>
+</html>
