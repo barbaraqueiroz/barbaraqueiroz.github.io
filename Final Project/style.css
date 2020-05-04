@@ -2,19 +2,21 @@
 /* Font awesome icons */
 @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
-/* Color Palette */
-/* Background lower: #292929 */
-/* Background lower: #353535 */
-/* Background lower: #f3971b */
-/* Background lower: #c2c0c3 */
-
-
-/*Start home section*/
-
 body{
   font-family: 'Raleway', sans-serif;
   margin:0;
 }
+html{
+  scroll-behavior: smooth;
+}
+/* Color Palette */
+/* Salmon: #f778fb */
+/* Light Green: #d5f4e6 */
+/* White: #ffffff */
+/* Black: #000000 */
+
+
+/*Start home section*/
 
 *{
   box-sizing: border-box;
@@ -31,7 +33,16 @@ header{
   left:0;
   top:0;
   padding:15px;
-  z-index: 10;
+  z-index: 100;
+}
+header.sticky{
+  position: fixed;
+  background-color: #ffffff;
+  animation: header .5s ease;
+}
+@keyframes header{
+  0%{transform: translateY(-100%);opacity:0}
+  100%{transform: translateY(0%)}
 }
 header .logo{
   float: left;
@@ -249,7 +260,7 @@ h2.title::before{
 /*Start competencies section*/
 .grid{
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   list-style: none;
 }
@@ -289,6 +300,187 @@ h2.title::before{
 /*End competencies section*/
 
 /*Start experiences section*/
+.grid{
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+  list-style: none;
+}
 
-
+#Experiences{
+  float: left;
+  width: 100%;
+  padding: 15px;
+  background-color: #ffffff;
+  margin: 40px 0;
+}
+#Experiences h3{
+  text-align: center;
+}
+#Experiences h4{
+  color: #000000;
+}
+#Experiences li{
+  padding: 10px;
+  background-color: #d5f4e6;
+  grid-column: span 4;
+  text-align: center;
+}
+#Experiences p{
+  color: #000000;
+  font-size: 14px;
+  line-height: 25px;
+  letter-spacing: .5px;
+  text-align: center;
+  font-weight: 400;
+}
+#Experiences .icon{
+  text-align: center;
+  font-size: 40px;
+  color: #f7786b;
+}
 /*End experiences section*/
+
+/*Start Portfolio section*/
+.grid{
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+  list-style: none;
+}
+
+#Portfolio{
+  float: left;
+  width: 100%;
+  padding: 15px;
+  background-color: #ffffff;
+  margin: 40px 0;
+}
+#Portfolio h3{
+  text-align: center;
+}
+#Portfolio h4{
+  color: #000000;
+}
+#Portfolio li{
+  padding: 10px;
+  background-color: #d5f4e6;
+  grid-column: span 4;
+  text-align: center;
+}
+#Portfolio p{
+  color: #000000;
+  font-size: 14px;
+  line-height: 25px;
+  letter-spacing: .5px;
+  text-align: center;
+  font-weight: 400;
+}
+#Portfolio img{
+  height: 200px;
+  margin: 10px auto;}
+
+/*End Portfolio section*/
+
+
+/*Start contact section*/
+.contact{
+  float: left;
+  width: 100%;
+  padding: 80px 0px;
+  background-color: #ffffff;
+}
+.contact .contact-content{
+  margin: auto;
+  max-width: 650px;
+}
+.contact .contact-content input,
+.contact .contact-content textarea{
+  height: 50px;
+  background-color: transparent;
+  border-color: #d5f4e6;
+  padding: 10px 15px;
+  color: 000000;
+  margin-bottom: 30px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+}
+.contact .contact-content textarea:focus{
+  height: 100px;
+}
+.contact .contact-content button{
+  display: block;
+  margin: auto;
+}
+/*End contact section*/
+
+/*Start footer section*/
+footer{
+  float: left;
+  width: 100%;
+  background-color:#ffffff;
+  padding: 50px 15px;
+}
+footer .footer-content{
+  float: left;
+  width: 100%;
+}
+footer .social-links{
+  float: left;
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #d5f4e6;
+  padding-top: 15px;
+}
+footer .social-links ul{
+  padding: 0;
+  list-style: none;
+  margin'; 0;
+}
+footer .social-links ul li{
+  display: inline;
+}
+footer .social-links ul li a{
+  display: inline-block;
+  padding: 15 px 15px;
+}
+footer .social-links ul li a span{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 1px solid #f7786b;
+  color: #f7786b;
+  line-height: 38px;
+  text-align: center;
+  font-size: 16px;
+  transition: all .5s ease;
+}
+footer .social-links ul li a span:hover{
+  background-color: #f7786b;
+  color: #ffffff;
+}
+footer .footer-content .box{
+  width: 33.33%;
+  float: left;
+  padding: 15px;
+  text-align: center;
+}
+footer .footer-content .box .icon span{
+color: #f7786b;
+font-size: 30px;
+}
+footer .footer-content .box .icon h4{
+font-size: 20px;
+color: #000000;
+margin: 0;
+font-weight: 600;
+padding: 20px 0 0px;
+}
+footer .footer-content .box .icon p{
+color:
+}
+/*End footer section*/
