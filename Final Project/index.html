@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164026963-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-164026963-1');
+    </script>
+    <meta charset ="UTF-8">
     <title>Barbara Queiroz</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
@@ -12,6 +22,12 @@
   <div class="container">
     <div class="logo ">
       <a href="#"><span>B</span>Queiroz</a>
+    </div>
+    <div class="trigger-main">
+      <a href="javascript:void(0);" class="ham-burger">
+        <span></span>
+        <span></span>
+      </a>
     </div>
     <div class="navbar">
       <ul>
@@ -164,7 +180,7 @@
      <li>
        <img src="images/indesign.png" alt="">
        <h4>FILM MAGAZINE DESIGN</h4>
-       <p>Sections of a Film Magazine designed by me using Adobe softwares </p>
+       <p>Sections of a Film Magazine designed by me using Adobe software (InDesign, Illustrator, Photoshop) </p>
        <a href="pdf/magazine.pdf"><button class="btn-light">Download</button></a>
      </li>
      <li>
@@ -176,13 +192,13 @@
      <li>
        <img src="images/smaria.png" alt="">
        <h4>MARKETING CONSULTANCY</h4>
-       <p>Marketing consultancy for Santa Maria Novella's  expansion in Bal Harbour Shops</p>
+       <p>Marketing consultancy for Luxury Brand Santa Maria Novella's  expansion in Bal Harbour Shops</p>
        <a href="pdf/smaria.pdf"><button class="btn-light">Download</button></a>
      </li>
      <li>
        <img src="images/umiami.png" alt="">
        <h4>BUSINESS PLAN</h4>
-       <p>Full Business Plan developed for the creation of a Valet service at the University of Miami</p>
+       <p>Full Business Plan developed for the possible implementation of a Valet service at the University of Miami</p>
        <a href="pdf/valet.pdf"><button class="btn-light">Download</button></a>
      </li>
   </section>
@@ -221,7 +237,8 @@
           <span class="fa fa-envelope"></span>
         </div>
         <h4>Email</h4>
-        <p>barbaraqqueiroz@gmail.com</p>
+        <p>barbaraqqueiroz
+          @gmail.com</p>
       </div>
       <div class="box">
         <div class="icon">
@@ -232,9 +249,8 @@
       </div>
       <div class="social-links">
         <ul>
-          <li><a href="#"><span class ="fa fa-linkedin"></span></a></li>
-          <li><a href="#"><span class ="fa fa-instagram"></span></a></li>
-          <li><a href="#"><span class ="fa fa-skype"></span></a></li>
+          <li><a href="https://www.linkedin.com/in/barbaraqqueiroz/"><span class ="fa fa-linkedin"></span></a></li>
+          <li><a href="https://www.instagram.com/takeoutfortwo/"><span class ="fa fa-instagram"></span></a></li>
         </ul>
       </div>
     </div>
@@ -243,25 +259,39 @@
 <!-- End Footer -->
 
 <!-- Jquery code -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-<script>
-  $(document).ready(function(){
-    var bottom=$("header").outerHeight();
-    var header=$("header").offset().top + bottom;
-
-    $(window).scroll(function(){
-      if($(window).scrollTop()>=header){
-        $("header").addClass("sticky")
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+   <script>
+       $(document).ready(function(){
+           var bottom=$("header").outerHeight();
+           var header=$("header").offset().top + bottom;
+        $(window).scroll(function(){
+        //header fixed when window width greater than 991px
+        if($(window).width()>991){
+        if($(window).scrollTop()>=header){
+          $("header").addClass("sticky")
+        }
+        else{
+          $("header").removeClass("sticky")
+        }
       }
-      else{
-        $("header").removeClass("sticky")
-      }
-  })
+       })
 
+//navbar active link
 
-    })
+$(".navbar ul li a").click(function(){
+  $(".navbar ul li a").removeclass("active")
+  $(this).addClass("active");
+})
+
+$(".ham-burger").click(function(){
+  $(this).toggleClass("active")
+  $(".navbar").toggleClass("open");
+})
+})
 </script>
+
+
+
 
   </body>
 </html>
